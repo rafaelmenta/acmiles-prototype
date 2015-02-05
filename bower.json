@@ -1,0 +1,19 @@
+{
+  "name": "acmiles-prototype",
+  "version": "0.0.0",
+  "authors": [
+    "Rafael Guedes <rafaelmenta@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "~0.2.2"
+  }
+}
