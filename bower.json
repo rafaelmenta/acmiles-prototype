@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-material-design": "~0.2.2"
+    "bootstrap-material-design": "~0.2.2",
+    "snackbarjs": "~1.0.0"
   }
 }

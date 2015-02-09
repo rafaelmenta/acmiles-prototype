@@ -1,253 +1,13 @@
 <html>
   <head>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/lib/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
-    <link href="public/lib/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="bower_components/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <title>ACMiles - Sharing Knowledge</title>
   </head>
-
-<style type="text/css">
-
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: "Bree Serif"
-}
-
-.navbar-colors li,
-.navbar-colors input.form-control,
-/* TODO apply to FF and IE as well */
-.navbar-colors .form-control::-webkit-input-placeholder,
-.navbar-colors i {
-  color: #546e7a !important;
-}
-
-.navbar-colors input.form-control {
-  border-bottom-color: #546e7a !important;
-}
-
-.btn {
-  font-family: RobotoDraft,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
-}
-
-.text-huge {
-  font-size: 130px;
-}
-
-.font-red {
-  color: #d50000;
-}
-
-.calendar {
-  font-size: 16px;
-}
-
-.shift-margin-top h3 {
-  margin-top: 0;
-}
-
-.separator {
-  border-top-width: 2px;
-  border-color: #424242;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.timeline {
-    list-style: none;
-    padding: 20px 0 20px;
-    position: relative;
-}
-
-    .timeline:before {
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        content: " ";
-        width: 3px;
-        background-color: #cfd8dc;
-        left: 50%;
-        margin-left: -1.5px;
-    }
-
-    .timeline > li {
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-        .timeline > li:before,
-        .timeline > li:after {
-            content: " ";
-            display: table;
-        }
-
-        .timeline > li:after {
-            clear: both;
-        }
-
-        .timeline > li:before,
-        .timeline > li:after {
-            content: " ";
-            display: table;
-        }
-
-        .timeline > li:after {
-            clear: both;
-        }
-
-        .timeline > li > .timeline-panel {
-            width: 46%;
-            float: left;
-            border: 1px solid #d4d4d4;
-            border-radius: 2px;
-            padding: 20px;
-            position: relative;
-            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-        }
-
-            .timeline > li > .timeline-panel:before {
-                position: absolute;
-                top: 26px;
-                right: -15px;
-                display: inline-block;
-                border-top: 15px solid transparent;
-                border-left: 15px solid #ccc;
-                border-right: 0 solid #ccc;
-                border-bottom: 15px solid transparent;
-                content: " ";
-            }
-
-            .timeline > li > .timeline-panel:after {
-                position: absolute;
-                top: 27px;
-                right: -14px;
-                display: inline-block;
-                border-top: 14px solid transparent;
-                border-left: 14px solid #fff;
-                border-right: 0 solid #fff;
-                border-bottom: 14px solid transparent;
-                content: " ";
-            }
-
-        .timeline > li > .timeline-badge {
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            font-size: 1.4em;
-            text-align: center;
-            position: absolute;
-            top: 16px;
-            left: 50%;
-            margin-left: -25px;
-            background-color: #999999;
-            z-index: 100;
-            border-top-right-radius: 50%;
-            border-top-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-            border-bottom-left-radius: 50%;
-        }
-
-        .timeline > li.timeline-inverted > .timeline-panel {
-            float: right;
-        }
-
-            .timeline > li.timeline-inverted > .timeline-panel:before {
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
-                right: auto;
-            }
-
-            .timeline > li.timeline-inverted > .timeline-panel:after {
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
-                right: auto;
-            }
-
-.timeline-badge.primary {
-    background-color: #2e6da4 !important;
-}
-
-.timeline-badge.success {
-    background-color: #3f903f !important;
-}
-
-.timeline-badge.warning {
-    background-color: #f0ad4e !important;
-}
-
-.timeline-badge.danger {
-    background-color: #d9534f !important;
-}
-
-.timeline-badge.info {
-    background-color: #5bc0de !important;
-}
-
-.timeline-title {
-    margin-top: 0;
-    color: inherit;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
-    margin-bottom: 0;
-}
-
-    .timeline-body > p + p {
-        margin-top: 5px;
-    }
-
-@media (max-width: 767px) {
-    ul.timeline:before {
-        left: 40px;
-    }
-
-    ul.timeline > li > .timeline-panel {
-        width: calc(100% - 90px);
-        width: -moz-calc(100% - 90px);
-        width: -webkit-calc(100% - 90px);
-    }
-
-    ul.timeline > li > .timeline-badge {
-        left: 15px;
-        margin-left: 0;
-        top: 16px;
-    }
-
-    ul.timeline > li > .timeline-panel {
-        float: right;
-    }
-
-        ul.timeline > li > .timeline-panel:before {
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto;
-        }
-
-        ul.timeline > li > .timeline-panel:after {
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto;
-        }
-}
-
-.huge-icon {
-  font-size: 35px;
-  line-height: 1.4;
-}
-
-</style>
 
   <body>
     <div class="navbar navbar-material-grey-300 navbar-colors">
@@ -261,10 +21,10 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
       </div>
       <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="javascript:void(0)"><i class="mdi-action-home"></i> Dashboard</a></li>
-          <li><a href="javascript:void(0)"><i class="mdi-av-mic"></i> Talks</a></li>
-          <li><a href="javascript:void(0)"><i class="mdi-hardware-keyboard"></i> Workshops</a></li>
-          <li><a href="javascript:void(0)"><i class="mdi-action-wallet-giftcard"></i> Rewards</a></li>
+          <li class="active"><a href="index.html"><i class="mdi-action-home"></i> Dashboard</a></li>
+          <li><a href="talks.html"><i class="mdi-av-mic"></i> Talks</a></li>
+          <li><a href="workshops.html"><i class="mdi-hardware-keyboard"></i> Workshops</a></li>
+          <li><a href="rewards.html"><i class="mdi-action-wallet-giftcard"></i> Rewards</a></li>
         </ul>
         <form class="navbar-form navbar-left">
           <div class="input-group">
@@ -494,38 +254,43 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Dialog</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="mdi-action-highlight-remove"></i></button>
+            <h2 class="modal-title">AngularJS is the best</h2>
           </div>
           <div class="modal-body">
-            <p>Fore aut non quem incididunt, varias reprehenderit deserunt quem offendit,
-              cillum proident ne reprehenderit, quem ad laborum, quo possumus praetermissum,
-              si ne illustriora, hic appellat coniunctione, do labore aliqua quo probant. In
-              probant voluptatibus quo mentitum est laboris. Quorum mandaremus graviterque.
-              Mentitum id velit, dolor aut litteris, ea varias illustriora, ita commodo ita
-              ingeniis, iis nulla appellat incurreret, aut irure amet summis pariatur ita ubi
-              quis dolore veniam proident, consequat sed ingeniis.</p>
+            <p class="text-muted">Learn how to rock with this awesome javascript MVW framework</p>
+            <h5 class="text-info"><i class="mdi-image-timer-auto"></i> by Rafael Guedes</h5>
+            <h5 class="text-info"><i class="mdi-action-event"></i> February 26th, 2015 - 7:00pm</h5>
+            <h5 class="text-info"><i class="mdi-maps-place"></i> Green Room</h5>
+            <h4>Attendance</h4>
+            <ul class="list-inline">
+              <li><i class="mdi-social-group"></i></li>
+              <li><img width="50" alt="icon" src="https://lh5.googleusercontent.com/-K01c6VCgpMQ/AAAAAAAAAAI/AAAAAAAAADM/fw1jAX0Jh40/photo.jpg" class="img-circle"></li>
+              <li><img width="50" alt="icon" src="https://lh4.googleusercontent.com/-U4Obz_4fLno/AAAAAAAAAAI/AAAAAAAAAA4/1fT7UH4TXBc/photo.jpg" class="img-circle"></li>
+              <li><img width="50" alt="icon" src="https://lh6.googleusercontent.com/-WGYp39XZQQo/AAAAAAAAAAI/AAAAAAAAABQ/QYLpSt4h5R4/photo.jpg" class="img-circle"></li>
+              <li><img width="50" alt="icon" src="https://lh3.googleusercontent.com/-h96sqf_KGK4/AAAAAAAAAAI/AAAAAAAAAec/AKPpdP1GU_I/photo.jpg" class="img-circle"></li>
+            </ul>
+            <ul class="list-inline">
+              <li><i class="mdi-hardware-computer"></i></li>
+              <li><img width="50" alt="icon" src="https://lh6.googleusercontent.com/-IwDOMUZqywI/AAAAAAAAAAI/AAAAAAAAABM/UGD970504ic/photo.jpg?sz=50" class="img-circle"></li>
+              <li><img width="50" alt="icon" src="https://lh3.googleusercontent.com/-GVRWUCpcaDg/AAAAAAAAAAI/AAAAAAAAAD8/3iTVqhUAC68/photo.jpg" class="img-circle"></li>
+              <li><img width="50" alt="icon" src="https://lh4.googleusercontent.com/-NBKXyA7VMek/AAAAAAAAAAI/AAAAAAAAACQ/1cd9MDpXvTw/photo.jpg" class="img-circle"></li>
+            </ul>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal">Dismiss</button>
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary" data-dismiss="modal" data-content="<i class='mdi-navigation-check'></i> Cool! You're now attending this talk!" data-style="snackbar-success" data-toggle="snackbar" data-timeout="20000">Attend this talk</button>
           </div>
         </div>
       </div>
     </div>
-    <style>
-      #dialog h2 {
-        padding: 14px;
-        margin: 0;
-        font-size: 16px;
-        font-weight: 400;
-      }
-    </style>
 
     <!-- Your site ends -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="public/lib/bootstrap-material-design/dist/js/ripples.min.js"></script>
-    <script src="public/lib/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/snackbarjs/dist/snackbar.min.js"></script>
     <script>
       $(document).ready(function() {
         $.material.init();
