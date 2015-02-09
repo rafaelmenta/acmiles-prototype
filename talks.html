@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="bower_components/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <title>ACMiles - Sharing Knowledge</title>
+  </head>
+
+  <body>
+    <div class="navbar navbar-material-grey-300 navbar-colors">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)"><img src="http://acmiles.avenuecode.com/img/logo_tiny.png"></a>
+      </div>
+      <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><i class="mdi-action-home"></i> Dashboard</a></li>
+          <li class="active"><a href="talks.html"><i class="mdi-av-mic"></i> Talks</a></li>
+          <li><a href="workshops.html"><i class="mdi-hardware-keyboard"></i> Workshops</a></li>
+          <li><a href="rewards.html"><i class="mdi-action-wallet-giftcard"></i> Rewards</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="mdi-action-search"></i></span>
+            <input type="text" class="form-control col-lg-8" placeholder="What are you looking for?" style="width: 320px">
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><p class="navbar-text">Hi Rafael</p></li>
+          <li style="padding: 5px"><img src="https://lh5.googleusercontent.com/-nV9iL6NukKI/AAAAAAAAAAI/AAAAAAAAAIU/8NlNM2lRVjU/photo.jpg?sz=50" class="img-circle" /></li>
+          <li><a href="javascript:void(0)"><i class="mdi-action-exit-to-app"></i> Signout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-sm-10">
+          <ul class="nav nav-pills">
+            <li class="active"><a href="javascript:void(0)">Upcoming Talks <span class="badge">2</span></a></li>
+            <li><a href="javascript:void(0)">Past Talks <span class="badge">45</span></a></li>
+            <li><a href="javascript:void(0)">Talks Given <span class="badge">6</span></a></li>
+            <li><a href="javascript:void(0)">Talks Attended <span class="badge">19</span></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-2">
+          <button class="btn btn-fab btn-raised btn-material-red pull-right" data-toggle="modal" data-target="#complete-dialog"><i class="mdi-content-add" style="top: 0"></i></button>
+        </div>
+      </div>
+      <div class="row">
+        <h3>Upcoming Talks</h3>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">AngularJS is the best!</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-1 col-sm-1"><img width="80" class="img-circle" src="https://lh5.googleusercontent.com/-nV9iL6NukKI/AAAAAAAAAAI/AAAAAAAAAIU/8NlNM2lRVjU/photo.jpg?sz=200" alt="icon"></div>
+              <div class="col-lg-11 col-sm-11">
+                <p>Learn how to rock with this awesome javascript MVW framework</p>
+                <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#complete-dialog">+ info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer style="margin-top: 100px">
+      <div>
+        <img src="http://acmiles.avenuecode.com/img/logo.png" class="center-block">
+        <h3 class="text-muted text-center">Sharing Knowledge</h3>
+      </div>
+    </footer>
+
+    <div id="complete-dialog" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="mdi-action-highlight-remove"></i></button>
+            <h2 class="modal-title">Add a new talk</h2>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <fieldset>
+                <div class="form-group">
+                  <label for="title" class="col-lg-2 control-label">Title</label>
+                  <div class="col-lg-10">
+                    <input class="form-control" id="tile" placeholder="Enter your talk title" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="textArea" class="col-lg-2 control-label">Description</label>
+                  <div class="col-lg-10">
+                    <textarea class="form-control" rows="3" id="textArea"></textarea>
+                    <span class="help-block">Please write some lines about the topics on your talk.</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="title" class="col-lg-2 control-label">Date</label>
+                  <div class="col-lg-10">
+                    <input class="form-control" id="tile" placeholder="TODO: Calendar Widget" type="text">
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" data-dismiss="modal" data-content="<i class='mdi-navigation-check'></i> Your talk has been created!" data-style="snackbar-success" data-toggle="snackbar" data-timeout="20000">Create talk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #floating-action-button .btn {
+        margin: 20px;
+      }
+      #floating-action-button h2 {
+        padding: 14px;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    </style>
+
+    <!-- Your site ends -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/snackbarjs/dist/snackbar.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $.material.init();
+      });
+    </script>
+  </body>
+</html>
